@@ -15,7 +15,6 @@ PubSubClient client(espClient);
 // **************
 void loop();
 void setup();
-void doAction(String x, String y, String z);
 void goToSleep();
 void connectToWiFi();
 void connectToHass();
