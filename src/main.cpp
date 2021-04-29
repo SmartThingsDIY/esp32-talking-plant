@@ -128,7 +128,7 @@ void setup() {
     // only print debug messages to serial if we're in debug mode
     if (DEBUG == true)
     {
-        Serial.println("Waking up ");
+        Serial.println("Motion detected! Waking up...");
         printWakeupReason(); // Print the wakeup reason for ESP32
     }
 

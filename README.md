@@ -8,10 +8,8 @@ This DIY smart cube sits on your desk and provides ability to automate everythin
 <img align="right" src="https://github.com/isbkch/esp32-aws-weather-station/blob/master/docs/esp-32.jpg?raw=true" style="max-width:100%;" height="200">
 
 *   [ESP32 Board](https://amzn.to/3jmCpqx)
-*   [MPU-6050](https://www.amazon.ca/gp/product/B07JPK26X2) 3 Axis Accelerometer Gyroscope
-*   [SW-420](https://www.amazon.ca/gp/product/B01FDGTTY8) Vibration Sensor
+*   [HC-SR501](https://www.amazon.ca/gp/product/B07KBWVJMP) PIR Sensor Infrared IR
 *   [5 LiPo Batteries And Charger](https://www.amazon.ca/gp/product/B0795F139D)
-*   [Breadboard](https://amzn.to/2Ei40tP)
 *   [Solder Kit](https://www.amazon.ca/-/fr/gp/product/B01N46T138/)
 *   [Helping Hands for soldering](https://www.amazon.ca/gp/product/B002PIA6Z4)
 *   [Breadboard](https://amzn.to/2Ei40tP) - [Jumper Wires](https://amzn.to/2Ehh2ru) - [Male to Male Jumper Wires + Tweezer](https://amzn.to/3jcf9eX)
@@ -22,12 +20,10 @@ This DIY smart cube sits on your desk and provides ability to automate everythin
 *   [VSCode](https://code.visualstudio.com/)
 *   [Fritzing](https://fritzing.org/)
 *   [PlatformIO](https://platformio.org/)
-*   [Home Assistant](https://www.home-assistant.io//)
+*   [Home Assistant](https://www.home-assistant.io/)
 
 📦 Libraries
 =====
-*   [Adafruit_MPU6050](https://github.com/adafruit/Adafruit_MPU6050)
-*   [Adafruit_Sensor](https://github.com/adafruit/Adafruit_Sensor)
 *   [PubSubClient](https://www.arduinolibraries.info/libraries/pub-sub-client)
 *   [Wire](https://github.com/espressif/arduino-esp32/tree/master/libraries/Wire)
 *   [WiFi](https://github.com/espressif/arduino-esp32/tree/master/libraries/WiFi)
