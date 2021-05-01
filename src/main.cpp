@@ -9,6 +9,10 @@
 #define NB_TRYWIFI 20    // WiFi connection retries
 #define durationSleep 30 // seconds
 
+int moistureSensorPin = 34;
+int moistureSensorPowerPin = 19;
+float moistureSensorValue = 0;
+
 WiFiClient espClient;
 PubSubClient client(espClient);
 
@@ -137,10 +141,30 @@ void setup() {
         delay(10); // will pause Zero, Leonardo, etc until serial console opens
     }
 
-    connectToWiFi();
-    connectToHass();
-    sendMessageToHass("message:water_me");
+    // Init both pins
+    pinMode(moistureSensorPin, INPUT);
+    pinMode(moistureSensorPowerPin, OUTPUT);
 
+    // Switch moisture sensor by sending High
+    digitalWrite(moistureSensorPowerPin, HIGH);
+    delay(100);
+
+    // perform a read from the moisture sensor
+    moistureSensorValue = analogRead(moistureSensorPin);
+    Serial.print("moistureSensorValue: ");
+    Serial.print(moistureSensorValue);
+
+    if (moistureSensorValue > 350) {
+        Serial.println(" -> wet");
+    } else {
+        Serial.println(" -> dry");
+    }
+
+    // connectToWiFi();
+    // connectToHass();
+    // sendMessageToHass("message:water_me");
+
+    digitalWrite(moistureSensorPowerPin, LOW);
     delay(5000); // stay awake for 5 seconds
     goToSleep();
 }
