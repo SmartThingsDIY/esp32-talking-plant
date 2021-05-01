@@ -28,11 +28,12 @@ This DIY smart cube sits on your desk and provides ability to automate everythin
 *   [Wire](https://github.com/espressif/arduino-esp32/tree/master/libraries/Wire)
 *   [WiFi](https://github.com/espressif/arduino-esp32/tree/master/libraries/WiFi)
 
-Hardware Overview: MPU-6050 3 Axis Accelerometer Gyroscope
+Hardware Overview: HC-SR501 PIR Sensor Infrared IR
 ----------------------
 
 <img align="center" src="https://github.com/MecaHumArduino/esp32-smart-cube/blob/main/doc/img/mpu6050.jpeg?raw=true">
 
+The HC-SR501 PIR motion sensor is a $2 sensor that is used to detect movement from humans or pets.
 The MPU-6050 is a serious little piece of motion processing tech! By combining both a 3-Axis accelerometer and a 3-Axis gyroscope on a single chip, the MPU-6050 is capable of processing complex 9-axis MotionFusion algorithms, the MPU-6050 does away with the cross-axis alignment problems that can creep up on discrete parts.
 
 Hardware Overview: SW-420 Vibration Sensor
