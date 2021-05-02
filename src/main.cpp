@@ -3,7 +3,6 @@
 #include <PubSubClient.h>
 #include "WiFi.h"
 #include <string>
-#include <Wire.h>
 
 #define DEBUG true       // switch to "false" for production
 #define NB_TRYWIFI 20    // WiFi connection retries
@@ -11,7 +10,7 @@
 
 int moistureSensorPin = 34;
 int moistureSensorPowerPin = 19;
-float moistureSensorValue = 0;
+float moisturesensorValue = 0;
 
 WiFiClient espClient;
 PubSubClient client(espClient);
@@ -22,7 +21,6 @@ void setup();
 void goToSleep();
 void connectToWiFi();
 void connectToHass();
-void initGyroComponent();
 void printWakeupReason();
 void sendMessageToHass(String msg);
 // **************
@@ -141,8 +139,7 @@ void setup() {
         delay(10); // will pause Zero, Leonardo, etc until serial console opens
     }
 
-    // Init both pins
-    pinMode(moistureSensorPin, INPUT);
+    // Init pin
     pinMode(moistureSensorPowerPin, OUTPUT);
 
     // Switch moisture sensor by sending High
@@ -150,11 +147,11 @@ void setup() {
     delay(100);
 
     // perform a read from the moisture sensor
-    moistureSensorValue = analogRead(moistureSensorPin);
-    Serial.print("moistureSensorValue: ");
-    Serial.print(moistureSensorValue);
+    moisturesensorValue = analogRead(moistureSensorPin);
+    Serial.print("moisturesensorValue: ");
+    Serial.print(moisturesensorValue);
 
-    if (moistureSensorValue > 350) {
+    if (moisturesensorValue < 1500) {
         Serial.println(" -> wet");
     } else {
         Serial.println(" -> dry");
