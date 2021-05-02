@@ -25,6 +25,49 @@ void printWakeupReason();
 void sendMessageToHass(String msg);
 // **************
 
+void setup() {
+    Serial.begin(115200);
+
+    // only print debug messages to serial if we're in debug mode
+    if (DEBUG == true)
+    {
+        Serial.println("Motion detected! Waking up...");
+        printWakeupReason(); // Print the wakeup reason for ESP32
+    }
+
+    while (!Serial)
+    {
+        delay(10); // will pause Zero, Leonardo, etc until serial console opens
+    }
+
+    // Init pin
+    pinMode(moistureSensorPowerPin, OUTPUT);
+
+    // Switch moisture sensor by sending High
+    digitalWrite(moistureSensorPowerPin, HIGH);
+    delay(100);
+
+    // perform a read from the moisture sensor
+    moisturesensorValue = analogRead(moistureSensorPin);
+    Serial.print("moisturesensorValue: ");
+    Serial.print(moisturesensorValue);
+
+    if (moisturesensorValue < 1500) {
+        Serial.println(" -> wet");
+    } else {
+        Serial.println(" -> dry");
+    }
+
+    // connectToWiFi();
+    // connectToHass();
+    // sendMessageToHass("message:water_me");
+
+    digitalWrite(moistureSensorPowerPin, LOW);
+    delay(5000); // stay awake for 5 seconds
+    goToSleep();
+}
+
+void loop() {}
 
 /**
  * Establishes WiFi connection
@@ -124,48 +167,6 @@ void sendMessageToHass(String msg)
     }
 }
 
-void setup() {
-    Serial.begin(115200);
-
-    // only print debug messages to serial if we're in debug mode
-    if (DEBUG == true)
-    {
-        Serial.println("Motion detected! Waking up...");
-        printWakeupReason(); // Print the wakeup reason for ESP32
-    }
-
-    while (!Serial)
-    {
-        delay(10); // will pause Zero, Leonardo, etc until serial console opens
-    }
-
-    // Init pin
-    pinMode(moistureSensorPowerPin, OUTPUT);
-
-    // Switch moisture sensor by sending High
-    digitalWrite(moistureSensorPowerPin, HIGH);
-    delay(100);
-
-    // perform a read from the moisture sensor
-    moisturesensorValue = analogRead(moistureSensorPin);
-    Serial.print("moisturesensorValue: ");
-    Serial.print(moisturesensorValue);
-
-    if (moisturesensorValue < 1500) {
-        Serial.println(" -> wet");
-    } else {
-        Serial.println(" -> dry");
-    }
-
-    // connectToWiFi();
-    // connectToHass();
-    // sendMessageToHass("message:water_me");
-
-    digitalWrite(moistureSensorPowerPin, LOW);
-    delay(5000); // stay awake for 5 seconds
-    goToSleep();
-}
-
 void goToSleep()
 {
     if (DEBUG == true)
@@ -211,5 +212,3 @@ void printWakeupReason()
         break;
     }
 }
-
-void loop() {}
