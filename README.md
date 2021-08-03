@@ -1,6 +1,6 @@
 # Talking Plant with ESP32 and Home-Assistant
 
-This DIY smart cube sits on your desk and provides ability to automate everything around you via quick shortcuts.
+This DIY talking plant solution measures the level of moisture in the oil and sends you a message through Alexa reminding you to water the soil when it's dry
 
 ⚡️ COMPONENTS AND SUPPLIES
 --------------------------
