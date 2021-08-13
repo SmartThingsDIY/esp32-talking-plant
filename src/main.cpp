@@ -5,7 +5,7 @@
 #include <string>
 
 #define DEBUG true       // switch to "false" for production
-#define NB_TRYWIFI 20    // WiFi connection retries
+#define NB_TRYWIFI 50    // WiFi connection retries
 #define durationSleep 30 // seconds
 
 int moistureSensorPin = 34;
@@ -58,9 +58,9 @@ void setup() {
         Serial.println(" -> dry");
     }
 
-    // connectToWiFi();
-    // connectToHass();
-    // sendMessageToHass("message:water_me");
+    connectToWiFi();
+    connectToHass();
+    sendMessageToHass("message:water_me");
 
     digitalWrite(moistureSensorPowerPin, LOW);
     delay(5000); // stay awake for 5 seconds

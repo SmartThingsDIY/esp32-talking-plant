@@ -11,6 +11,7 @@ This DIY talking plant solution measures the level of moisture in the oil and se
 *   [HC-SR501](https://www.amazon.ca/gp/product/B07KBWVJMP) PIR Sensor Infrared IR
 *   [5 LiPo Batteries And Charger](https://www.amazon.ca/gp/product/B0795F139D)
 *   [Solder Kit](https://www.amazon.ca/-/fr/gp/product/B01N46T138/)
+*   [Silicone Soldering Pad](https://www.amazon.ca/gp/product/B082NBS3PH/)
 *   [Helping Hands for soldering](https://www.amazon.ca/gp/product/B002PIA6Z4)
 *   [Breadboard](https://amzn.to/2Ei40tP) - [Jumper Wires](https://amzn.to/2Ehh2ru) - [Male to Male Jumper Wires + Tweezer](https://amzn.to/3jcf9eX)
 
