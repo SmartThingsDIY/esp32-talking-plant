@@ -1,6 +1,6 @@
 # Talking Plant with ESP32 and Home-Assistant
 
-This DIY talking plant solution measures the level of moisture in the oil and sends you a message through Alexa reminding you to water the soil when it's dry
+This DIY talking plant solution measures the level of moisture in the oil and sends you a message through Alexa reminding you to water it when the soil is dry
 
 ⚡️ COMPONENTS AND SUPPLIES
 --------------------------
@@ -32,9 +32,24 @@ This DIY talking plant solution measures the level of moisture in the oil and se
 Hardware Overview: HC-SR501 PIR Sensor Infrared IR
 ----------------------
 
-<img align="center" src="https://github.com/MecaHumArduino/esp32-smart-cube/blob/main/doc/img/mpu6050.jpeg?raw=true">
+<img align="right" src="https://github.com/MecaHumArduino/esp32-talking-plant/blob/main/doc/img/HC-SR501.jpg?raw=true">
 
 The HC-SR501 PIR motion sensor is a $2 sensor that is used to detect movement from humans or pets.
+**How PIR Motion Sensor Works**
+All objects with a temperature above Absolute Zero emit heat energy in the form of infrared radiation, including human bodies. The hotter an object is, the more radiation it emits.
+For most of our Arduino projects that need to detect when a person has left or entered the area, or has approached, HC-SR501 PIR sensors are a great choice. They are low power and low cost, pretty rugged, have a wide lens range, easy to interface with and are insanely popular among hobbyists.
+
+HC-SR501 PIR sensor has three output pins VCC, Output and Ground as shown in the diagram below. It has a built-in voltage regulator so it can be powered by any DC voltage from 4.5 to 12 volts, typically 5V is used. Other than this, there are a couple options you have with your PIR. Let’s check them out.
+
+<img align="center" src="https://github.com/MecaHumArduino/esp32-talking-plant/blob/main/doc/images/PIR-Sensor-Pinout-with-Jumper-Setting-Sensitivity-Time-Adjustment-BISS0001-IC-Labeling-Diagram.png?raw=true">
+
+There are two potentiometers on the board to adjust a couple of parameters:
+
+Sensitivity– This sets the maximum distance that motion can be detected. It ranges from 3 meters to approximately 7 meters. The topology of your room can affect the actual range you achieve.
+Time– This sets how long that the output will remain HIGH after detection. At minimum it is 3 seconds, at maximum it is 300 seconds or 5 minutes.
+
+
+
 The MPU-6050 is a serious little piece of motion processing tech! By combining both a 3-Axis accelerometer and a 3-Axis gyroscope on a single chip, the MPU-6050 is capable of processing complex 9-axis MotionFusion algorithms, the MPU-6050 does away with the cross-axis alignment problems that can creep up on discrete parts.
 
 Hardware Overview: SW-420 Vibration Sensor
