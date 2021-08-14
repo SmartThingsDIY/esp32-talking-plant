@@ -85,9 +85,9 @@ No one likes wires hanging around, and so I went ahead looking for a 3D case I c
 Schematic Diagram
 -----------------
 
-Wire the **HC-SR501** and the **SW-420** to the [**ESP32**](https://amzn.to/3jmCpqx) development board as shown in the following schematic diagram.
+Wire the **HC-SR501** and the Soil sensor to the [**ESP32**](https://amzn.to/3jmCpqx) development board as shown in the following schematic diagram.
 
-<img align="center" src="https://github.com/MecaHumArduino/esp32-smart-cube/blob/main/doc/img/wiring-diagram.png?raw=true" style="max-width:100%;" height="600">
+<img align="center" src="https://github.com/MecaHumArduino/esp32-talking-plant/blob/main/doc/images/wiring-diagram.png?raw=true" style="max-width:100%;" height="600">
 
 
 Make sure you have installed an MQTT broker in your HomeAssistant setup beforehand. You can start here: https://www.home-assistant.io/docs/mqtt/broker#run-your-own
