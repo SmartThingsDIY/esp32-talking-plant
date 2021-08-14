@@ -32,7 +32,7 @@ This DIY talking plant solution measures the level of moisture in the oil and se
 Hardware Overview: HC-SR501 PIR Sensor Infrared IR
 ----------------------
 
-<img align="right" src="https://github.com/MecaHumArduino/esp32-talking-plant/blob/main/doc/img/HC-SR501.jpg?raw=true">
+<img align="right" src="https://github.com/MecaHumArduino/esp32-talking-plant/blob/main/doc/images/HC-SR501.jpg?raw=true">
 
 The HC-SR501 PIR motion sensor is a $2 sensor that is used to detect movement from humans or pets.
 **How PIR Motion Sensor Works**
