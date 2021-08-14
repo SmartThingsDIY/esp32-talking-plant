@@ -2,6 +2,10 @@
 
 This DIY talking plant solution measures the level of moisture in the oil and sends you a message through Alexa reminding you to water it when the soil is dry
 
+This repo accompanies the "Talking Plant" YouTube video. it contains the code, library, diagrams, and more information that I promised in the videos.
+
+[**Talking Plant with Arduino**](https://youtu.be/vL6TKYhjwQc)
+
 ⚡️ COMPONENTS AND SUPPLIES
 --------------------------
 
@@ -9,11 +13,13 @@ This DIY talking plant solution measures the level of moisture in the oil and se
 
 *   [ESP32 Board](https://amzn.to/3jmCpqx)
 *   [HC-SR501](https://www.amazon.ca/gp/product/B07KBWVJMP) PIR Sensor Infrared IR
+*   [Capacitive Soil Moisture Sensor](https://amzn.to/3gn5FLN)
 *   [5 LiPo Batteries And Charger](https://www.amazon.ca/gp/product/B0795F139D)
 *   [Solder Kit](https://www.amazon.ca/-/fr/gp/product/B01N46T138/)
 *   [Silicone Soldering Pad](https://www.amazon.ca/gp/product/B082NBS3PH/)
 *   [Helping Hands for soldering](https://www.amazon.ca/gp/product/B002PIA6Z4)
 *   [Breadboard](https://amzn.to/2Ei40tP) - [Jumper Wires](https://amzn.to/2Ehh2ru) - [Male to Male Jumper Wires + Tweezer](https://amzn.to/3jcf9eX)
+*   [Hardware / Storage Cabinet Drawer](https://amzn.to/36ehDpB)
 
 🚀APPS
 ------
@@ -29,13 +35,28 @@ This DIY talking plant solution measures the level of moisture in the oil and se
 *   [Wire](https://github.com/espressif/arduino-esp32/tree/master/libraries/Wire)
 *   [WiFi](https://github.com/espressif/arduino-esp32/tree/master/libraries/WiFi)
 
+<img align="right" src="https://github.com/MecaHumArduino/arduino-uno-aws-irrigation-system/blob/master/docs/moisture_sensor.png?raw=true" style="max-width:100%;" height="350">
+
+What Is Moisture?
+----------------------
+
+Moisture is the presence of water, often in trace amounts. Small amounts of water may be found, for example, in the air (humidity), in foods, and in some commercial products. Moisture also refers to the amount of water vapor present in the air.
+
+Hardware Overview: Capacitive Sensor
+----------------------
+
+Inserted into the soil around the plants. This sensor can check whether your plant is thirsty by measuring the level of moisture in the soil.
+In contrast to the normal resistive sensor, this capacitive soil moisture sensor has no adjustable switching contact. It changes with the humidity. Thus displays the exact humidity values ​​in real time.
+
 Hardware Overview: HC-SR501 PIR Sensor Infrared IR
 ----------------------
 
-<img align="right" src="https://github.com/MecaHumArduino/esp32-talking-plant/blob/main/doc/img/HC-SR501.jpg?raw=true">
+<img align="right" src="https://github.com/MecaHumArduino/esp32-talking-plant/blob/main/doc/images/HC-SR501.jpg?raw=true" height="200" style="max-width:100%;">
 
 The HC-SR501 PIR motion sensor is a $2 sensor that is used to detect movement from humans or pets.
+
 **How PIR Motion Sensor Works**
+
 All objects with a temperature above Absolute Zero emit heat energy in the form of infrared radiation, including human bodies. The hotter an object is, the more radiation it emits.
 For most of our Arduino projects that need to detect when a person has left or entered the area, or has approached, HC-SR501 PIR sensors are a great choice. They are low power and low cost, pretty rugged, have a wide lens range, easy to interface with and are insanely popular among hobbyists.
 
@@ -45,19 +66,9 @@ HC-SR501 PIR sensor has three output pins VCC, Output and Ground as shown in the
 
 There are two potentiometers on the board to adjust a couple of parameters:
 
-Sensitivity– This sets the maximum distance that motion can be detected. It ranges from 3 meters to approximately 7 meters. The topology of your room can affect the actual range you achieve.
-Time– This sets how long that the output will remain HIGH after detection. At minimum it is 3 seconds, at maximum it is 300 seconds or 5 minutes.
+**Sensitivity–** This sets the maximum distance that motion can be detected. It ranges from 3 meters to approximately 7 meters. The topology of your room can affect the actual range you achieve.
 
-
-
-The MPU-6050 is a serious little piece of motion processing tech! By combining both a 3-Axis accelerometer and a 3-Axis gyroscope on a single chip, the MPU-6050 is capable of processing complex 9-axis MotionFusion algorithms, the MPU-6050 does away with the cross-axis alignment problems that can creep up on discrete parts.
-
-Hardware Overview: SW-420 Vibration Sensor
-----------------------
-
-<img align="center" src="https://github.com/MecaHumArduino/esp32-smart-cube/blob/main/doc/img/SW-420-sensor.jpeg?raw=true" height="300">
-
-This Vibration Sensor Module consists of an SW-420 Vibration Sensor, resistors, capacitor, potentiometer, comparator LM393 IC, Power, and status LED in an integrated circuit. It is useful for a variety of shocks triggering, theft alarm, smart car, an earthquake alarm, motorcycle alarm, etc.
+**Time–** This sets how long that the output will remain HIGH after detection. At minimum it is 3 seconds, at maximum it is 300 seconds or 5 minutes.
 
 Hardware Overview: LiPo Battery
 -----------------
@@ -74,7 +85,7 @@ No one likes wires hanging around, and so I went ahead looking for a 3D case I c
 Schematic Diagram
 -----------------
 
-Wire the **MPU6050** and the **SW-420** to the [**ESP32**](https://amzn.to/3jmCpqx) development board as shown in the following schematic diagram.
+Wire the **HC-SR501** and the **SW-420** to the [**ESP32**](https://amzn.to/3jmCpqx) development board as shown in the following schematic diagram.
 
 <img align="center" src="https://github.com/MecaHumArduino/esp32-smart-cube/blob/main/doc/img/wiring-diagram.png?raw=true" style="max-width:100%;" height="600">
 
