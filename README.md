@@ -80,7 +80,9 @@ I had purchased this set of [5 batteries with a charger](https://www.amazon.ca/g
 
 3D PRINTED CASE
 ---------------
-No one likes wires hanging around, and so I went ahead looking for a 3D case I can use for this project and luckily found [this one on Thingiverse](https://www.thingiverse.com/thing:2550726) so that's what I'll be using
+No one likes wires hanging around, and so I went ahead looking for a 3D case I can use for this project and luckily found [this one on Thingiverse](https://www.thingiverse.com/thing:2363763) so that's what I'll be using
+
+<img align="center" src="https://github.com/MecaHumArduino/esp32-talking-plant/blob/main/doc/3D%20case/images/924c52ed896d74f60433fa66f0c81e17_preview_featured.jpg?raw=true" style="max-width:100%;" height="400">
 
 Schematic Diagram
 -----------------
