@@ -4,7 +4,7 @@ This DIY talking plant solution measures the level of moisture in the oil and se
 
 This repo accompanies the "Talking Plant" YouTube video. it contains the code, library, diagrams, and more information that I promised in the videos.
 
-[<img align="right" src="https://github.com/isbkch/esp32-talking-plant/blob/main/doc/images/video-thumbnail.png?raw=true" style="max-width:100%;" height="400">](https://www.youtube.com/watch?v=5X6wq9XWl10)
+[<img align="center" src="https://github.com/MecaHumArduino/esp32-talking-plant/blob/main/doc/images/video-thumbnail.png" style="max-width:100%;" height="400">](https://www.youtube.com/watch?v=5X6wq9XWl10)
 
 [**Talking Plant Asks For Water When Thirsty**](https://www.youtube.com/watch?v=5X6wq9XWl10)
 
