@@ -84,6 +84,10 @@ No one likes wires hanging around, and so I went ahead looking for a 3D case I c
 
 <img align="center" src="https://github.com/MecaHumArduino/esp32-talking-plant/blob/main/doc/3D%20case/images/924c52ed896d74f60433fa66f0c81e17_preview_featured.jpg?raw=true" style="max-width:100%;" height="400">
 
+Home Assistant Library
+---------------
+**Alexa media player**: https://github.com/custom-components/alexa_media_player
+
 Schematic Diagram
 -----------------
 
